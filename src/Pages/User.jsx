@@ -11,7 +11,7 @@ function User() {
     const prapms = useParams();
     useEffect(() =>{
         fetchUser(prapms.login);
-    },[])
+    })
 
     const {
     name,
