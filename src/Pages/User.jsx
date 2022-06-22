@@ -11,7 +11,7 @@ function User() {
     const prapms = useParams();
     useEffect(() =>{
         fetchUser(prapms.login);
-    },[])
+    })
 
     const {
     name,
@@ -70,7 +70,7 @@ function User() {
             <div className='w-full rounded-lg shadow-md bg-base-100 stats'>
               {company && (
                 <div className='stat'>
-                  <div className='stat-title text-md'>Company</div>
+                  <div className='stat-title text-lg'>Company</div>
                   <div className='text-lg stat-value'>{company}</div>
                 </div>
               )}
@@ -110,7 +110,7 @@ function User() {
         <div className='w-full py-5 mb-6 shadow-md stats'>
           <div className='stat'>
             <div className='stat-figure text-secondary'>
-              <FaUsers className='text-3xl md:text-5xl' />
+              <FaUsers className='text-3xl md:text-5xl text-orange-400' />
             </div>
             <div className='stat-title pr-5'>Followers</div>
             <div className='stat-value pr-5 text-3xl md:text-4xl'>
@@ -119,7 +119,7 @@ function User() {
           </div>
           <div className='stat'>
             <div className='stat-figure text-secondary'>
-              <FaUserFriends className='text-3xl md:text-5xl' />
+              <FaUserFriends className='text-3xl md:text-5xl text-orange-400' />
             </div>
             <div className='stat-title pr-5'>Following</div>
             <div className='stat-value pr-5 text-3xl md:text-4xl'>
@@ -128,7 +128,7 @@ function User() {
           </div>
           <div className='stat'>
             <div className='stat-figure text-secondary'>
-              <FaCodepen className='text-3xl md:text-5xl' />
+              <FaCodepen className='text-3xl md:text-5xl text-orange-400'/>
             </div>
             <div className='stat-title pr-5'>Public Repos</div>
             <div className='stat-value pr-5 text-3xl md:text-4xl'>
@@ -137,7 +137,7 @@ function User() {
           </div>
           <div className='stat'>
             <div className='stat-figure text-secondary'>
-              <FaStore className='text-3xl md:text-5xl' />
+              <FaStore className='text-3xl md:text-5xl text-orange-400' />
             </div>
             <div className='stat-title pr-5'>Public Gists</div>
             <div className='stat-value pr-5 text-3xl md:text-4xl'>

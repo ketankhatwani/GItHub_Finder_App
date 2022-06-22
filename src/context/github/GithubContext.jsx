@@ -11,15 +11,15 @@ export const GithubProvider = ({ children }) => {
       q: text
     })
 
-    const response = await fetch(`http://api.github.com/search/users?${param}`);
-    const {items}= await response.json();
+    const response = await fetch(`https://api.github.com/search/users?${param}`);
+    const { items } = await response.json();
     setUsers(items);
   }
 
 
   //For a single user
   const fetchUser = async (login) => {
-    const response = await fetch(`http://api.github.com/users/${login}`);
+    const response = await fetch(`https://api.github.com/users/${login}`);
     const data = await response.json();
     setUser(data);
   }
