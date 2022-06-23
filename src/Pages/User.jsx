@@ -1,19 +1,19 @@
-import {useContext, useEffect} from 'react';
+import { useContext, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import GithubContext from '../context/github/GithubContext';
-import {FaCodepen, FaStore, FaUserFriends, FaUsers} from 'react-icons/fa'
-import {Link} from 'react-router-dom'
+import { FaCodepen, FaStore, FaUserFriends, FaUsers } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 function User() {
 
-    const {fetchUser, user} = useContext(GithubContext);
+  const { fetchUser, user } = useContext(GithubContext);
 
-    const prapms = useParams();
-    useEffect(() =>{
-        fetchUser(prapms.login);
-    })
+  const prapms = useParams();
+  useEffect(() => {
+    fetchUser(prapms.login);
+  })
 
-    const {
+  const {
     name,
     type,
     company,
@@ -39,7 +39,7 @@ function User() {
           </Link>
         </div>
         <div className='grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 mb-8 md:gap-8'>
-          <div className='custom-card-image mb-6 md:mb-0'>
+          <div className='custom-card-image mb-6 md:mb-0 p-4'>
             <div className='rounded-lg shadow-xl image-full'>
               <figure>
                 <img className='rounded-full' src={avatar_url} alt='' />
@@ -48,7 +48,7 @@ function User() {
           </div>
           <div className='col-span-2'>
             <div className='mb-6'>
-              <h1 className='text-3xl card-title'>
+              <h1 className='text-3xl card-title mb-2'>
                 {name}
                 <div className='ml-2 mr-1 badge badge-success'>{type}</div>
                 {hireable && (
@@ -110,7 +110,7 @@ function User() {
         <div className='w-full py-5 mb-6 shadow-md stats'>
           <div className='stat'>
             <div className='stat-figure text-secondary'>
-              <FaUsers className='text-3xl md:text-5xl text-orange-400' />
+              <FaUsers className='text-3xl md:text-5xl text-fuchsia-600' />
             </div>
             <div className='stat-title pr-5'>Followers</div>
             <div className='stat-value pr-5 text-3xl md:text-4xl'>
@@ -119,7 +119,7 @@ function User() {
           </div>
           <div className='stat'>
             <div className='stat-figure text-secondary'>
-              <FaUserFriends className='text-3xl md:text-5xl text-orange-400' />
+              <FaUserFriends className='text-3xl md:text-5xl text-fuchsia-600' />
             </div>
             <div className='stat-title pr-5'>Following</div>
             <div className='stat-value pr-5 text-3xl md:text-4xl'>
@@ -128,7 +128,7 @@ function User() {
           </div>
           <div className='stat'>
             <div className='stat-figure text-secondary'>
-              <FaCodepen className='text-3xl md:text-5xl text-orange-400'/>
+              <FaCodepen className='text-3xl md:text-5xl text-fuchsia-600' />
             </div>
             <div className='stat-title pr-5'>Public Repos</div>
             <div className='stat-value pr-5 text-3xl md:text-4xl'>
@@ -137,7 +137,7 @@ function User() {
           </div>
           <div className='stat'>
             <div className='stat-figure text-secondary'>
-              <FaStore className='text-3xl md:text-5xl text-orange-400' />
+              <FaStore className='text-3xl md:text-5xl text-fuchsia-600' />
             </div>
             <div className='stat-title pr-5'>Public Gists</div>
             <div className='stat-value pr-5 text-3xl md:text-4xl'>

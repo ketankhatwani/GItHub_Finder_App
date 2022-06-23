@@ -40,7 +40,7 @@ function UserSearch() {
                 </form>
             </div>
             <div className='flex justify-center'>
-                {users.length > 0 && <button onClick={cleanUsers} className="btn btn-ghost btn-md mb-8">Clear</button>}
+                {users.length > 0 && <button onClick={cleanUsers} className="btn bg-slate-200 text-slate-800 btn-md hover:bg-gray-300 hover:text-slate-900 mb-8 border-none">Clear</button>}
             </div>
         </>
         // </div>
